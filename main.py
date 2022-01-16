@@ -16,8 +16,10 @@ for files in TestJSONFilePath:  # Iterating every file in folder
                 if words != '{' and words != '}' and words != '[' and words != ']' and words != '"' and words != ',':
                     temp_Str += words
 
-            temp_Str1 = temp_Str.replace(" ", "")  # Removing extra spaces form the line
-            temp_Str2 = temp_Str1.replace(':', " ")  # Replacing : with spaces in respected lines
+            # Removing extra spaces form the line
+            temp_Str1 = temp_Str.replace(" ", "")
+            # Replacing : with spaces in respected lines
+            temp_Str2 = temp_Str1.replace(':', " ")
             final_str = temp_Str2  # Storing final output in variable
 
             with open(rf.name[:-5] + '.txt', 'w') as wf:  # Writing the output in new file
